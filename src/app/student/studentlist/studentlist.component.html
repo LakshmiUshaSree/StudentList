@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="box mt-1 p-5">
+      <h1>STUDENT LIST</h1>
+  
+    <div class="addstudent">
+      <a href="#" routerLink="/student/addstudent/" class="btn btn-success">Add Student</a>
+    </div>
+  
+    </div>
+  
+    <table class="table table-bordered">
+      <tr>
+       
+        <th>Student Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Phone Number</th>
+        <th>Gender</th>
+        <th>Joined Date</th>
+        <th width="350px">Action</th>
+      </tr>
+      <tr *ngFor="let student of students">
+       
+        <td>{{ student.StudentName }}</td>
+        <td>{{ student.Email }}</td>
+        <td>{{ student.Age }}</td>
+        <td>{{ student.PhoneNumber }}</td>
+        <td>{{ student.Gender }}</td>
+        <td>{{ student.JoinedDate }}</td>
+        <td>
+       
+        </td>
+      </tr>
+    </table>
+  </div>

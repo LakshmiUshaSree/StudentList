@@ -1,0 +1,35 @@
+[
+    {
+        "StudentName": "Mahesh kumar",
+        "Email":"mahesh@gmail.com",
+        "Age":26,
+        "Phone Number":9093231212,
+        "Gender":"Male",
+        "JoinedDate":"22-04-2021"
+    },
+    {
+        "StudentName": "Rajesh kumar",
+        "Email":"rajesh@gmail.com",
+        "Age":25,
+        "Phone Number":8793231212,
+        "Gender":"Male",
+        "JoinedDate":"19-04-2020"
+    },
+    {
+        "StudentName": "Geetha",
+        "Email":"geetha@gmail.com",
+        "Age":21,
+        "Phone Number":9921231212,
+        "Gender":"Female",
+        "JoinedDate":"05-01-2019"
+    },
+    {
+        "StudentName": "Praveen",
+        "Email":"praveen@gmail.com",
+        "Age":25,
+        "Phone Number":8173231212,
+        "Gender":"Male",
+        "JoinedDate":"12-10-2021"
+    }
+    
+]

@@ -1,0 +1,98 @@
+<div class="container-fluid">
+
+    <div class="box mt-1 p-3">
+        <h1>CREATE NEW STUDENT</h1>
+  
+    <div class="fam mt-5">      
+        <form [formGroup]="form" (ngSubmit)="submit()">     
+          
+         
+            
+            <div class="form-group">
+                <label for="studentname">Student Name</label>
+                <input 
+                    formControlName="studentname"
+                    id="studentname" 
+                    type="text" 
+                    class="form-control">
+    
+                <div *ngIf="f.studentname.touched && f.studentname.invalid" class="alert alert-danger">
+                    <div *ngIf="f.studentname.errors?.required">Student Name is required.</div>
+                    <div *ngIf="f.studentname.errors?.pattern">Enter only characters.</div>
+                    <div *ngIf="f.studentname.errors?.pattern">only characters are allowed.</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email </label>
+                <input
+                    formControlName="email"
+                    id="email" 
+                    type="text" 
+                    class="form-control">
+                <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+                    <div *ngIf="f.email.errors?.required">Email is required.</div>
+                    <div *ngIf="f.email.errors?.pattern">Please provide a valid email address</div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="">Phone Number</label>
+                <input
+                    formControlName="phonenumber"
+                    id="phonenumber" 
+                    type="text" 
+                    class="form-control">
+                <div *ngIf="f.phonenumber.touched && f.phonenumber.invalid" class="alert alert-danger">
+                    <div *ngIf="f.phonenumber.errors?.required">Phone Number is required.</div>
+                    <div *ngIf="f.phonenumber.errors?.pattern">Please enter 10 digit mobile number</div>
+                </div>
+            </div>
+            
+           
+            
+   
+        
+        
+        <div class="form-group">
+                <label for="">Joined Date</label>
+                <input type="date" 
+                id="joineddate" 
+                name="joineddate" 
+                formControlName="joineddate">   
+              
+            <div *ngIf="f.joineddate.touched && f.joineddate.invalid" class="alert alert-danger">
+                <div *ngIf="f.joineddate.errors?.required">Joined date is required.</div>
+            </div>
+            
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <div>
+              <input type="radio" value="Male" name="gender" formControlName="gender">
+              <label for="Male">&nbsp;Male</label>
+           </div>
+  
+           <div>
+              <input type="radio" value="Female" name="gender" formControlName="gender">
+              <label for="Female">&nbsp;Female</label>
+           </div>
+              
+            <div *ngIf="f.gender.touched && f.gender.invalid" class="alert alert-danger">
+                <div *ngIf="f.gender.errors.required">Gender is required.</div>
+            </div>
+        </div>
+    
+        
+        <div class="but">
+            <a href="#" routerLink="/student/studentlist/" class="btn btn-primary">Back</a>
+            &nbsp;&nbsp;
+            <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+        </div> 
+    </form>
+ </div>   
+</div>
